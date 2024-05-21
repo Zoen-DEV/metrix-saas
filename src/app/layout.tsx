@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/index.scss";
+import Navbar from "@/components/main/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <aside style={{ background: "green" }}>
-          <nav>
-            <h1>nav</h1>
-          </nav>
-        </aside>
+        <Navbar />
         {children}
       </body>
     </html>
