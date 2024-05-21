@@ -1,0 +1,22 @@
+.header-container {
+  @include flex(row, space-between, center);
+  width: 100%;
+  padding: 16px;
+  background-color: $--generic-white;
+
+  h1 {
+    font-size: 18px;
+    color: $--neutral-60;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .header-content {
+    @include flex(row, flex-end, center, 14px);
+
+    .header-alert-icon,
+    .header-profile-image {
+      cursor: pointer;
+    }
+  }
+}
