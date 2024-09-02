@@ -10,10 +10,12 @@
     "push": "npm version patch && git push"
   },
   "dependencies": {
+    "@types/uuid": "^10.0.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,7 +1,7 @@
 import NavbarOrdersIcon from "@/assets/utils/navbar/getOrdersIcon";
 import NavbarHomeIcon from "../../assets/utils/navbar/getHomeIcon";
 import { RoutesEnum } from "../enums/routes.enum";
-import { INavbarRoute } from "../interfaces/nav_routes";
+import { INavbarRoute } from "../interfaces/nav_routes.interface";
 import NavbarCustomersIcon from "@/assets/utils/navbar/getCustomersIcon";
 import NavbarInventoryIcon from "@/assets/utils/navbar/getInventoryIcon";
 import NavbarConversationIcon from "@/assets/utils/navbar/getConversationIcon";
@@ -14,18 +14,18 @@ export const NavbarRoutes: INavbarRoute[] = [
     icon: NavbarHomeIcon,
   },
   {
-    label: "Orders",
-    path: RoutesEnum.orders,
+    label: "Finance",
+    path: RoutesEnum.finance,
     icon: NavbarOrdersIcon,
   },
   {
-    label: "Customers",
-    path: RoutesEnum.customers,
+    label: "Tasks",
+    path: RoutesEnum.tasks,
     icon: NavbarCustomersIcon,
   },
   {
-    label: "Inventory",
-    path: RoutesEnum.inventory,
+    label: "Calendar",
+    path: RoutesEnum.calendar,
     icon: NavbarInventoryIcon,
   },
   {

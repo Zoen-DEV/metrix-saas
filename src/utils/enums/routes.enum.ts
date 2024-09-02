@@ -1,8 +1,8 @@
 export enum RoutesEnum {
   main = "/",
-  orders = "/orders",
-  customers = "/customers",
-  inventory = "/inventory",
+  finance = "/finance",
+  tasks = "/tasks",
+  calendar = "/calendar",
   conversation = "/conversation",
   settings = "/settings",
 }

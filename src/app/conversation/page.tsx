@@ -1,9 +1,12 @@
-import React from 'react'
+import ChatsList from "@/components/conversation/chats";
+import React from "react";
 
 const ConversationContainer = () => {
   return (
-    <div>ConversationContainer</div>
-  )
-}
+    <section className="conversation-container">
+      <ChatsList />
+    </section>
+  );
+};
 
-export default ConversationContainer
+export default ConversationContainer;
