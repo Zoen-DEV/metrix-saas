@@ -13,7 +13,7 @@ const ChatsList = () => {
           <span>{ChatsListData.length}</span>
         </div>
 
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" className="search-input" />
       </header>
 
       <ul className="chats-list">
@@ -26,8 +26,14 @@ const ChatsList = () => {
             />
 
             <div className="chat-info">
-              <p>{chat.name}</p>
-              <span>{formatDate(chat.createdAt)}</span>
+              <div className="main-chat-info">
+                <p className="chat-name">{chat.name}</p>
+                <p className="last-message">last chat message</p>
+              </div>
+
+              <div className="sub-chat-info">
+                <span>{formatDate(chat.createdAt)}</span>
+              </div>
             </div>
           </li>
         ))}

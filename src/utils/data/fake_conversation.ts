@@ -11,7 +11,7 @@ export const ChatsListData: IChat[] = [
   {
     id: JaneDoeId,
     name: "Jane Doe",
-    createdAt: "2023-01-10T12:00:00Z",
+    createdAt: "2024-09-02T12:00:00Z",
     icon: jane,
     participants: [
       {
@@ -27,7 +27,7 @@ export const ChatsListData: IChat[] = [
   {
     id: JanetAdebayoId,
     name: "Janet Adebayo",
-    createdAt: "2023-01-10T10:00:00Z",
+    createdAt: "2024-08-29T10:00:00Z",
     icon: janet,
     participants: [
       {
@@ -43,7 +43,7 @@ export const ChatsListData: IChat[] = [
   {
     id: id(),
     name: "Grupo de produccion",
-    createdAt: "2023-01-10T10:00:00Z",
+    createdAt: "2024-01-10T10:00:00Z",
     icon: undefined,
     participants: [
       {

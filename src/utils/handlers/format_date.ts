@@ -11,8 +11,14 @@ export const formatDate = (date: string) => {
       minute: "2-digit",
     });
   } else if (daysGap === 1) {
-    return "ayer";
+    return "yesterday";
+  } else if (daysGap >= 30) {
+    const monthGap = Math.floor(daysGap / 30);
+    return `${monthGap} ${monthGap >= 2 ? "months" : "month"}`;
+  } else if (daysGap >= 7) {
+    const weekGap = Math.floor(daysGap / 7);
+    return `${weekGap} ${weekGap >= 2 ? "weeks" : "week"}`;
   } else {
-    return `${daysGap} días`;
+    return `${daysGap} days`;
   }
 };

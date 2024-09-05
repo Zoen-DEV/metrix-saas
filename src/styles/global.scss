@@ -4,6 +4,7 @@ $--generic-white: #ffffff;
 $--generic-stroke: #f1f3f9;
 $--generic-success: #519c66;
 $--generic-danger: #cc5f5f;
+$--generic-border: #cfd3d4;
 
 $--primary-10: #dbdeee;
 $--primary-20: #c4cae8;
@@ -37,6 +38,17 @@ $--neutral-70: #37393f;
 $--neutral-80: #33343a;
 $--neutral-90: #2c2d33;
 $--neutral-100: #1c1d22;
+
+$--zindex-10: 1000;
+$--zindex-20: 2000;
+$--zindex-30: 3000;
+$--zindex-40: 4000;
+$--zindex-50: 5000;
+$--zindex-60: 6000;
+$--zindex-70: 7000;
+$--zindex-80: 8000;
+$--zindex-90: 9000;
+$--zindex-100: 10000;
 
 @mixin flex($fd, $jc, $ai, $g: 0, $fw: nowrap) {
   display: flex;

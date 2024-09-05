@@ -4,4 +4,6 @@
 
 @import "./components/dashboard/dashboard.scss";
 
-@import "./components/conversation/chats_list.scss";
+@import "./components/conversation/chats_list.scss",
+  "./components/conversation/chats.scss",
+  "./components/conversation/closed_chat.scss";

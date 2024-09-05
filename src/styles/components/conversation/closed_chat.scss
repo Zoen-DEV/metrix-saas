@@ -1,0 +1,8 @@
+.closed-chat-container{
+    @include flex(column, center, center, 16px);
+    background-color: $--generic-white;
+    border-radius: 12px;
+    width: 80%;
+    height: 95%;
+    margin-right: 16px;
+}
