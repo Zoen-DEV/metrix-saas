@@ -6,13 +6,15 @@ import chat from "../../assets/icons/conversation/chat.svg";
 const ClosedChat = () => {
   return (
     <section className="closed-chat-container">
-      <Image src={chatFill} alt="chat fill icon" />
+      <div className="chat-icon-container">
+        <Image src={chatFill} alt="chat fill icon" />
+      </div>
 
       <h3>Messages</h3>
 
       <p>Click on a contact to view messages.</p>
 
-      <button>
+      <button className="new-message-button">
         <Image src={chat} alt="chat icon" />
         New Message
       </button>

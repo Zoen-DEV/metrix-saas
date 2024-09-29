@@ -39,7 +39,11 @@
     width: 100%;
 
     li:hover {
-      background-color: $--primary-10;
+      background-color: $--generic-hover;
+
+      .chat-icon {
+        border-color: $--primary-10;
+      }
     }
 
     li {
