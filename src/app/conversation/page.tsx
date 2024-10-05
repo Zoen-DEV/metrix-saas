@@ -1,9 +1,14 @@
-import React from 'react'
+import ChatsList from "@/components/conversation/chats";
+import ClosedChat from "@/components/conversation/closed_chat";
+import React from "react";
 
 const ConversationContainer = () => {
   return (
-    <div>ConversationContainer</div>
-  )
-}
+    <section className="conversation-container">
+      <ChatsList />
+      <ClosedChat />
+    </section>
+  );
+};
 
-export default ConversationContainer
+export default ConversationContainer;

@@ -1,0 +1,6 @@
+.conversation-container {
+  @include flex(row, normal, center, 16px);
+  margin-left: 15%;
+  height: 100%;
+  padding-top: 70px;
+}

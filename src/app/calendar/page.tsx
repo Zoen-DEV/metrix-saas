@@ -1,9 +1,9 @@
 import React from 'react'
 
-const InventoryContainer = () => {
+const CalendarContainer = () => {
   return (
     <div>InventoryContainer</div>
   )
 }
 
-export default InventoryContainer
+export default CalendarContainer

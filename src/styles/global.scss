@@ -4,6 +4,8 @@ $--generic-white: #ffffff;
 $--generic-stroke: #f1f3f9;
 $--generic-success: #519c66;
 $--generic-danger: #cc5f5f;
+$--generic-border: #cfd3d4;
+$--generic-hover: #f7f7fc;
 
 $--primary-10: #dbdeee;
 $--primary-20: #c4cae8;
@@ -15,6 +17,7 @@ $--primary-70: #7c8fec;
 $--primary-80: #6d83ec;
 $--primary-90: #6078ec;
 $--primary-100: #5570f1;
+$--primary-150: #5068e2;
 
 $--secondary-10: #fef9f2;
 $--secondary-20: #fef5ea;
@@ -38,6 +41,17 @@ $--neutral-80: #33343a;
 $--neutral-90: #2c2d33;
 $--neutral-100: #1c1d22;
 
+$--zindex-10: 1000;
+$--zindex-20: 2000;
+$--zindex-30: 3000;
+$--zindex-40: 4000;
+$--zindex-50: 5000;
+$--zindex-60: 6000;
+$--zindex-70: 7000;
+$--zindex-80: 8000;
+$--zindex-90: 9000;
+$--zindex-100: 10000;
+
 @mixin flex($fd, $jc, $ai, $g: 0, $fw: nowrap) {
   display: flex;
   flex-direction: $fd;
@@ -45,4 +59,21 @@ $--neutral-100: #1c1d22;
   align-items: $ai;
   gap: $g;
   flex-wrap: $fw;
+}
+
+@mixin button() {
+  all: unset;
+  cursor: pointer;
+  @include flex(row, center, center, 12px);
+
+  background-color: $--primary-100;
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  color: $--generic-white;
+  font-size: 14px;
+
+  &:hover{
+    background-color: $--primary-150;
+  }
 }

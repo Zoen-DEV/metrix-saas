@@ -1,0 +1,110 @@
+.chats-container {
+  @include flex(column, flex-start, center, 16px);
+  height: 95%;
+  width: 25%;
+  background-color: $--generic-white;
+  margin-left: 16px;
+  border-radius: 12px;
+
+  .chats-header {
+    @include flex(column, flex-start, center, 10px);
+    margin-top: 16px;
+    width: 90%;
+
+    .chats-header-info {
+      @include flex(row, space-between, center);
+      width: 100%;
+
+      h3 {
+        color: $--neutral-90;
+      }
+
+      span {
+        color: $--neutral-20;
+      }
+    }
+
+    .search-input {
+      all: unset;
+      width: 90%;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid $--generic-border;
+      font-size: 14px;
+    }
+  }
+
+  .chats-list {
+    @include flex(column, flex-start, center);
+    width: 100%;
+
+    li:hover {
+      background-color: $--generic-hover;
+
+      .chat-icon {
+        border-color: $--primary-10;
+      }
+    }
+
+    li {
+      @include flex(row, space-between, center, 6px);
+      width: 100%;
+      padding: 8px 0;
+      border-bottom: 1px solid $--generic-stroke;
+      cursor: pointer;
+
+      .chat-icon {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid $--generic-stroke;
+        margin-left: 12px;
+      }
+
+      .chat-info {
+        @include flex(row, space-between, center);
+        width: 100%;
+        height: 100%;
+
+        .main-chat-info {
+          @include flex(column, space-between, flex-start);
+          width: 75%;
+          height: 100%;
+          padding: 3px 0;
+          overflow: hidden;
+
+          .chat-name {
+            width: 100%;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $--neutral-60;
+          }
+
+          .last-message {
+            font-size: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: $--neutral-30;
+          }
+        }
+
+        .sub-chat-info {
+          @include flex(column, flex-end, flex-end);
+          width: 25%;
+          height: 100%;
+          padding: 3px 0;
+          margin-right: 12px;
+
+          span {
+            font-size: 10px;
+            white-space: nowrap;
+            color: $--neutral-30;
+          }
+        }
+      }
+    }
+  }
+}
