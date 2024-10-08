@@ -1,4 +1,4 @@
-export const formatDate = (date: string) => {
+export const formatDate = (date: string): string => {
   const now = new Date();
   const dateFromInput = new Date(date);
 
@@ -22,3 +22,18 @@ export const formatDate = (date: string) => {
     return `${daysGap} days`;
   }
 };
+
+export const formatHour = (dateString: string): string => {
+  const date = new Date(dateString);
+
+  let hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; 
+
+  const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+  return `${hours}:${formattedMinutes} ${ampm}`;
+}

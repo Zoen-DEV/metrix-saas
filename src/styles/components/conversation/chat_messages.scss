@@ -1,0 +1,88 @@
+.chat-container {
+  @include flex(column, space-between, center, 16px);
+  background-color: $--generic-white;
+  border-radius: 12px;
+  width: 80%;
+  height: 95%;
+  margin-right: 16px;
+
+  .chat-header {
+    background-color: green;
+    width: 100%;
+  }
+
+  .chat-messages-container {
+    @include flex(column, flex-end, flex-start, 8px);
+    width: 95%;
+    height: 100%;
+
+    li {
+      @include flex(column, center, flex-start, 2px);
+
+      .message-content {
+        background-color: $--primary-100;
+        border-radius: 16px 16px 16px 0;
+        padding: 12px;
+        color: $--generic-white;
+        font-size: 16px;
+      }
+
+      span {
+        color: $--neutral-30;
+        font-size: 14px;
+      }
+    }
+
+    .chat-own-message {
+      align-items: flex-end;
+      align-self: flex-end;
+
+      .message-content {
+        background-color: $--secondary-50;
+        border-radius: 16px 16px 0 16px;
+        color: $--neutral-100;
+      }
+    }
+  }
+
+  .chat-input-container {
+    @include flex(row, space-between, center, 16px);
+    width: 95%;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid $--generic-grey;
+    border-radius: 8px;
+    cursor: text;
+
+    .chat-input {
+      all: unset;
+      width: 100%;
+      resize: none;
+      line-height: 18px;
+    }
+
+    button {
+      all: unset;
+      cursor: pointer;
+      @include flex(row, center, center);
+      align-self: flex-end;
+    }
+
+    .attach-file-btn,
+    button[type="submit"] {
+      border-radius: 8px;
+      background-color: $--secondary-30;
+      padding: 8px;
+    }
+
+    .emoji-btn {
+      margin-bottom: 8px;
+    }
+
+    button[type="submit"] {
+      gap: 8px;
+      padding: 8px 10px;
+      margin-bottom: 2px;
+    }
+  }
+}

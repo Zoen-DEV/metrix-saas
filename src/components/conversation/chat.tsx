@@ -1,23 +1,27 @@
 import Image from "next/image";
-import React from "react";
 import ConversationMessages from "./messages";
+import { IChatDetails } from "@/utils/interfaces/conversation.interface";
+import SendMessageForm from "./send_message";
 
-interface IPersonalChat {
+interface IChatMessages {
   image: string;
   name: string;
   isOnline: boolean;
   lastMessageTime: string;
+  chatDetails: IChatDetails | undefined;
 }
 
-const PersonalChat = ({
+const ChatMessages = ({
   image,
   name,
   isOnline,
   lastMessageTime,
-}: IPersonalChat) => {
+  chatDetails,
+}: IChatMessages) => {
   const isOnlineClassName = isOnline
     ? "user-is-online-span"
     : "user-is-offline-span";
+
   return (
     <section className="chat-container">
       <header className="chat-header">
@@ -36,9 +40,11 @@ const PersonalChat = ({
         </div>
       </header>
 
-      <ConversationMessages />
+      <ConversationMessages chatDetails={chatDetails} />
+
+      <SendMessageForm />
     </section>
   );
 };
 
-export default PersonalChat;
+export default ChatMessages;

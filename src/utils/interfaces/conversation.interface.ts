@@ -2,11 +2,9 @@ import { StaticImageData } from "next/image";
 
 export interface IChatMessage {
   id: string;
-  chatId: string;
   senderId: string;
   content: string;
   sentAt: string;
-  sender: IChatParicipant;
 }
 
 export interface IChat {
@@ -15,6 +13,11 @@ export interface IChat {
   createdAt: string;
   participants: IChatParicipant[];
   icon: StaticImageData | undefined;
+}
+
+export interface IChatDetails {
+  id: string;
+  conversation: IChatMessage[];
 }
 
 export interface IChatParicipant {

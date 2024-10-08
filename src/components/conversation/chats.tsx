@@ -1,10 +1,20 @@
-import { ChatsListData } from "@/utils/data/fake_conversation";
+import { ChatDetails, ChatsListData } from "@/utils/data/fake_conversation";
 import { formatDate } from "@/utils/handlers/format_date";
 import Image from "next/image";
 import user from "../../assets/icons/users/user.png";
 import group from "../../assets/icons/users/group.png";
+import { Dispatch, SetStateAction } from "react";
+import { IChatDetails } from "@/utils/interfaces/conversation.interface";
 
-const ChatsList = () => {
+const ChatsList = ({
+  setChatDetails,
+}: {
+  setChatDetails: Dispatch<SetStateAction<IChatDetails | undefined>>;
+}) => {
+  const handleOnClick = () => {
+    setChatDetails(ChatDetails);
+  };
+
   return (
     <section className="chats-container">
       <header className="chats-header">
@@ -18,7 +28,7 @@ const ChatsList = () => {
 
       <ul className="chats-list">
         {ChatsListData.map((chat) => (
-          <li key={chat.id}>
+          <li key={chat.id} onClick={handleOnClick}>
             <Image
               src={chat.icon ?? (chat.participants.length > 2 ? group : user)}
               alt="chat icon"
